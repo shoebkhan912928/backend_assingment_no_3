@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+}
+
+.back{
+  background-color: rgb(230, 9, 9);
+  padding-bottom: 30px;
+}
+.todo{
+  margin-top: 12px;
+  padding: 40px;
+  font-size: 50px;
+  color: white;
+}
+
+table {
+  width: 100%; /* Make the table fill its container */
+}
+.shoeb {
+  float: right; /* Float the button to the right */
+  background: none;
+  border: none;
+  color: rgb(206, 202, 202); 
+  cursor: pointer;
+  font-size: 17px;
+  
+}
+#asd{
+  background-color: black;
+  width:40px;
+  padding: 5px;
+}
+.tablecss{
+  padding:15px 120px 0px 120px;
+
+}
+#tabllist{
+  padding-left: 70px;
+  font-size:xx-large ;
+  color: rgb(86, 70, 225);
+}
+

@@ -61,6 +61,6 @@ app.delete('/api/todos/:id', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, () =>  {
   console.log(`Server running on port ${PORT}`);
 });

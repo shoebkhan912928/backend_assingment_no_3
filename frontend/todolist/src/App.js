@@ -28,7 +28,7 @@ function App() {
         body: JSON.stringify({ task: newTask }),
       });
       setNewTask('');
-       await fetchTodos();
+      await fetchTodos();
     } catch (error) {
       console.error('Error adding task:', error);
     }
@@ -39,32 +39,48 @@ function App() {
       await fetch(`http://localhost:5000/api/todos/${id}`, {
         method: 'DELETE',
       });
-     await fetchTodos();
+      await fetchTodos();
     } catch (error) {
       console.error('Error deleting task:', error);
     }
   };
 
-  
+
   return (
     <div className='back'>
-      <h3 className="text-center todo">To Do List App</h3>
-      <form className="col-md-12  " id="shoeb">
-        <div className="input-group mb-3">
-          <span className="input-group-text">Enter the task:</span>
-          <input type="text" className="form-control" placeholder="Enter the task" value={newTask} onChange={(e) => setNewTask(e.target.value)} />
-          <button className="btn btn-success" onClick={addTask}>Add product</button>
+      <h3 className="text-center todo monoton-regular rammetto-one-regular">To Do List App</h3>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-12 '>
+            <form className="f" id="shoeb">
+              <div className="input-group  mb-3">
+                {/* <span className="input-group-text ">Enter the task:</span> */}
+                <input type="text "  className="form-control input_text" placeholder="Enter the task" value={newTask} onChange={(e) => setNewTask(e.target.value)} />
+                <button className="btn button_add" onClick={addTask}>Add product</button>
+              </div>
+            </form>
+          </div>
+
         </div>
-      </form>
+
+
+        {/* <form className="col-md-12" id="shoeb">
+          <div className="input-group f mb-3">
+            <span className="input-group-text ">Enter the task:</span>
+            <input type="text" className="form-control" placeholder="Enter the task" value={newTask} onChange={(e) => setNewTask(e.target.value)} />
+            <button className="btn btn-success" onClick={addTask}>Add product</button>
+          </div>
+        </form> */}
+      </div>
       <div className="container-fluid listproductcss">
         {/* <AddProduct getData={getData} /> */}
         <div className="tablecss">
-          <table className="table table-secondary">
-            <tbody>
+          <table className="table  ">
+            <tbody >
               {
-                todos.map((todo) => (
-                  <tr key={todo.id}>
-                    <td id='tabllist'>{todo.task} <button className='shoeb'  onClick={() => deleteTask(todo.id)}><div id='asd'>X</div></button> </td>
+                todos.map((todo,index) => (
+                  <tr key={todo.id} className={index % 2 === 0 ? 'odd-row' : 'even-row'}>
+                    <td id='tabllist' className='hover_tab'>{todo.task} <button className='shoeb' onClick={() => deleteTask(todo.id)}><div id='asd'>X</div></button> </td>
                   </tr>
                 ))}
             </tbody>
@@ -74,6 +90,7 @@ function App() {
       </div>
 
     </div>
+    
 
   )
 }

@@ -1,16 +1,53 @@
+*{
+     /* background-image: repeating-conic-gradient(red 10%, yellow 20%); */
+   /* background-image: repeating-radial-gradient(red, yellow 10%, green 15%); */
+
+/* background-color: red; */
+}
 .App {
   text-align: center;
+  /* background-color: blue; */
+}
+* {
+  box-sizing: border-box;
 }
 
-.back{
-  background-color: rgb(230, 9, 9);
-  padding-bottom: 30px;
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
+
+
+.back{
+  /* height: 100%; */
+  margin-top: -12px;
+  
+   background-image: repeating-conic-gradient(red 10%, rgb(196, 9, 183) 20%);
+    /* border-radius: 50%; */
+  /* background-color: rgb(230, 9, 9); */
+   /* background-image: repeating-radial-gradient(red, yellow 10%, green 15%); */
+  /* padding-bottom: 300px; */
+}
+/* .monoton-regular {
+  font-family: "Monoton", sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+} */
+.rammetto-one-regular {
+  font-family: "Rammetto One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .todo{
+  
   margin-top: 12px;
   padding: 40px;
   font-size: 50px;
-  color: white;
+  color: rgb(76, 220, 220);
+  text-shadow: 2px 2px 8px rgb(123, 3, 111);
+
 }
 
 table {
@@ -23,12 +60,17 @@ table {
   color: rgb(206, 202, 202); 
   cursor: pointer;
   font-size: 17px;
+  /* width: 50%; */
   
 }
 #asd{
-  background-color: black;
+  background-color: rgb(240, 35, 35);
   width:40px;
   padding: 5px;
+}
+#asd:hover{
+  transform: scale(1.3)
+  
 }
 .tablecss{
   padding:15px 120px 0px 120px;
@@ -37,6 +79,114 @@ table {
 #tabllist{
   padding-left: 70px;
   font-size:xx-large ;
-  color: rgb(86, 70, 225);
+  color: rgb(17, 4, 137);
+  background-color: white;
+}
+#shoeb{
+  /* width: 50%; */
+  
+
+}
+.f{
+  display: flex;
+  justify-content: center !important;
+  /* width: 50%; */
+  /* margin-left: 100px !important; */
+}
+.button_add{
+  border-radius: 100%;
+  background-color: rgb(179, 10, 194);
+  border: 4px solid rgb(91, 246, 140);
+
+}
+.input_text{
+  color: rgba(237, 10, 10, 0.873) !important;
+  font-weight: bold;
+  border-radius: 30px;
+  /* box-shadow: 4px 50px 90px red; */
+}
+.button_add{
+  color:white;
+  font-weight: bold;
+}
+.button_add:hover{
+  background-color: rgb(4, 236, 16);
+  color: rgb(214, 6, 6);
+}
+/* .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: rgb(0, 255, 34) !important;
+  color: brown;
+} */
+
+.odd-row {
+  background-color: rgb(121, 225, 60) !important;
+  color: brown;
+}
+.even-row {
+  background-color: white !important;
+}
+table {
+  background-color: transparent !important;
 }
 
+table td, table th {
+  background-color: transparent !important;
+}
+.hover_tab:hover{
+  background-color: brown !important;
+  color: blue !important;
+}
+@media only screen and (max-width: 426px){
+  /* .rammetto-one-regular{
+    font-size: 12px;
+    font-weight: 900;
+    color: red;
+  } */
+  .todo{
+    /* font-size: 12px !important; */
+    /* color: brown; */
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .container,
+  .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+
+  .tablecss {
+    padding: 0px !important;
+  }
+
+  #tabllist {
+    font-size: 16px !important;
+    padding-left: 10px !important;
+  }
+
+  .input-group {
+    /* flex-direction: column; */
+    /* align-items: stretch; */
+  }
+
+  .input_text {
+    /* width: 100% !important; */
+    /* margin-bottom: 10px; */
+  }
+
+  .button_add {
+    /* width: 100% !important; */
+    /* border-radius: 12px !important; */
+  }
+
+  .todo {
+    font-size: 22px !important;
+    padding: 20px !important;
+  }
+   .tablecss {
+    padding: 0 10px;
+  }
+}
